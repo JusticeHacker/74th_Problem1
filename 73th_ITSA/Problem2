@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+   double a,b,c,d;
+    scanf("%lf %lf %lf %lf",&a,&b,&c,&d);
+    printf("(%.2lf)+(%.2lf)i\n",a+c,b+d);
+    printf("(%.2lf)+(%.2lf)i\n",a-c,b-d);
+    printf("(%.2lf)+(%.2lf)i\n",a*c-b*d,b*c+a*d);
+
+}
