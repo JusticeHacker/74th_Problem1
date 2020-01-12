@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int number;
+    int i;
+    char line[1024];
+    
+    while(fgets(line,1024,stdin))
+    {
+        number=atoi(line);
+        if(number==1) printf("NO\n");
+        if(number==2) printf("YES\n");
+        for(i=2;i<number;i++)
+        {
+            if(number%i==0){
+                printf("NO\n");
+                break;
+            }
+            if(i==number-1){
+                printf("YES\n");
+            }
+        }
+    }
+}
