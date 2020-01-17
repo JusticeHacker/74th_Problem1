@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char line[1024];
+    int tmp=0,n;
+    scanf("%d\n",&n);
+    for(int l=0;l<n;l++){
+        fgets(line,1024,stdin);
+        tmp=0;
+        printf("Token found:\n");
+        for(int i=tmp;i<1024;i++){
+            if(line[i]=='\0') break;
+            if(line[i]==':'||line[i]==','||line[i]==';'||line[i]=='\n'){
+                for(int j=tmp;j<i;j++){
+                    printf("%c",line[j]);
+                }printf("\n");
+                tmp=i+1;
+            }
+        }
+    }
+}
