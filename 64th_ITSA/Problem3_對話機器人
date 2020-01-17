@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    int count=0;
+    char line[1024];
+    while(fgets(line,1024,stdin))
+    {
+        if(strcmp(line,"Hi\n")==0||strcmp(line,"Hello\n")==0||strcmp(line,"How are you\n")==0||strcmp(line,"How do you do\n")==0){
+            count++;
+            if(count%4==1){
+                printf("Hi\n");
+            }else if(count%4==2){
+                printf("Hello\n");
+            }else if(count%4==3){
+                printf("How do you do\n");
+            }else if(count%4==0){
+                printf("How are you\n");
+            }
+        }
+        else{
+            count=0;
+            printf("Sorry\n");
+        }
+
+
+    }
+}
