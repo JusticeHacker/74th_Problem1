@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+float pi(float n){
+    if(n==1) return 4;
+    else return pi(n-1)+(4/(2*n-1))*pow(-1,n-1);
+}
+
+int main()
+{
+    int n;
+    while(scanf("%d",&n)!=EOF){
+        if(n==0) break;
+        printf("%.5f",pi(n));
+    }
+}
