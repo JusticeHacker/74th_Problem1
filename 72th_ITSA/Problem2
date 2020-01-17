@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int array[500];
+    int count=0,bound;
+    float n;
+    while(scanf("%d",&array[count])!=EOF){
+        count++;
+    }
+    n=count;
+    bound=ceil(n/2);
+    //printf("bound=%d,count=%d\n",bound,count);
+    int countarray[20001]={0};
+    for(int i=0;i<count;i++){
+        for(int j=0;j<=20000;j++)
+        if(array[i]==j){
+            countarray[j]++;
+        }
+    }
+    for(int i=0;i<=20000;i++){
+        //printf("i=%d count=%d\n",i,countarray[i]);
+        if(countarray[i]>=bound){
+            printf("%d\n",i);
+            break;
+        }
+        if(i==20000){
+            printf("n/a\n");
+        }
+    }
+}
