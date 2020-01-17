@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    int month,date,number;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d %d",&month,&date);
+        number=month*100+date;
+        //printf("%d",number);
+        if(121<=number&&number<=218) printf("Aquarius\n");
+        else if(219<=number&&number<=320)printf("Pisces\n");
+        else if(321<=number&&number<=420)printf("Aries\n");
+        else if(421<=number&&number<=521)printf("Taurus\n");
+        else if(522<=number&&number<=621)printf("Gemini\n");
+        else if(622<=number&&number<=722)printf("Cancer\n");
+        else if(723<=number&&number<=823)printf("Leo\n");
+        else if(824<=number&&number<=923)printf("Virgo\n");
+        else if(924<=number&&number<=1023)printf("Libra\n");
+        else if(1024<=number&&number<=1122)printf("Scorpio\n");
+        else if(1123<=number&&number<=1221)printf("Sagittarius\n");
+        else printf("Capricorn\n");
+    }
+}
