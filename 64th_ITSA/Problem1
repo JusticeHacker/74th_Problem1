@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+int main()
+{
+    int n;
+    int t1,t2,t3;
+    for(int i=0;i<n;i++){
+        scanf("%d %d %d",&t1,&t2,&t3);
+        if(t1>=60&&t2>=60&&t3>=60){
+            printf("P\n");
+            continue;
+        }else if(t1+t2+t3>=220){
+            printf("P\n");
+            continue;
+        }
+        if(t1>=60&&t2>=60&&t3<60){
+            printf("M\n");
+            continue;
+        }
+        if(t1>=60&&t2<60&&t3>=60){
+            printf("M\n");
+            continue;
+        }
+        if(t1<60&&t2>=60&&t3>=60){
+            printf("M\n");
+            continue;
+        }
+        if(t1<60&&t2<60&&t3>=80){
+            printf("M\n");
+            continue;
+        }if(t1<60&&t2>=80&&t3<60){
+            printf("M\n");
+            continue;
+        }if(t1>=80&&t2<60&&t3<60){
+            printf("M\n");
+            continue;
+        }
+        printf("F\n");
+    }
+}
