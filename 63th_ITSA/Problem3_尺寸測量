@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    float tall,weight,age;
+    float hat,clothes,pants;
+    int flag;
+    while(scanf("%f %f %f",&tall,&weight,&age)){
+        hat=(weight/tall)*41.2;
+        clothes=(tall*weight)/634.4;
+        pants=weight*0.4;
+        if(age>=30){
+            clothes=clothes+(int)((age-30)/5)*0.15;
+        }
+        if(age>=28){
+            pants=pants+(int)((age-28)/2)*0.25;
+        }
+        printf("%.2f %.2f %.2f\n",hat,clothes,pants);
+        scanf("%d",&flag);
+        if(flag==0) continue;
+        if(flag==-1) break;
+    }
+}
